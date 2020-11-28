@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "projects": {
+    "action-button": {
+      "root": "libs/action-button",
+      "sourceRoot": "libs/action-button/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/action-button/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "build": {
+          "builder": "@nrwl/web:package",
+          "options": {
+            "outputPath": "dist/libs/action-button",
+            "tsConfig": "libs/action-button/tsconfig.lib.json",
+            "project": "libs/action-button/package.json",
+            "entryFile": "libs/action-button/src/index.ts",
+            "external": ["react", "react-dom", "react-is", "styled-components"],
+            "babelConfig": "@nrwl/react/plugins/bundle-babel",
+            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+            "assets": [
+              {
+                "glob": "README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/action-button/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/workspace"
+  }
+}
