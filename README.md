@@ -17,3 +17,5 @@ React nie lubi gdy w runtime wpadnie więcej niż jedna instanacja React (różn
 Konfiguracja tsconfig/webpack pozwala wymusić w miejscu rozwiązania użycie zawsze tej samej definicji React.
 To jest niedogodność wprost wynikająca z użycia react + yarn/npm link (https://github.com/facebook/react/issues/14257).
 Problem nie występuje przy budowaniu/uruchamianiu liba w wersji z repozytorium npm (czyli tak jak np. budować będzie CI czy uruchamiać osoby nie pracujące nad libem).
+
+https://youtu.be/13Tv76mHT_4
