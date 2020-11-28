@@ -15,7 +15,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "react": ["node_modules/react"],
+      "react-dom": ["node_modules/react-dom"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

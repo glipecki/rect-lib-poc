@@ -6,7 +6,7 @@ import styled from 'styled-components';
 export interface ActionButtonProps {}
 
 const StyledActionButton = styled.div`
-  color: pink;
+  color: blue;
 `;
 
 export function ActionButton(props: ActionButtonProps) {
